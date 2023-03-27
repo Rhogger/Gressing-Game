@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 6.25%;
+
+  /* font-family: 'DM Sans', sans-serif;
+font-family: 'Montserrat', sans-serif; */
+}
+
+body {
+  background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+
+  font-family: 'DM Sans', sans-serif;
+
+  height: 100vh;
+
+  display: grid;
+  align-items: center;
+}
+
+main {
+  background-color: #FFF;
+
+  margin: 0 auto;
+  border-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 428rem;
+}
+
+.result {
+  display: none;
+}
+
+main .text-test {
+  margin: 48rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+}
+
+main .text-test h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: semibold;
+  font-size: 24rem;
+}
+
+main .text-test p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 16rem;
+}
+
+main .btn-test {
+  margin-bottom: 64rem;
+
+  max-width: 125rem;
+}
+
+main .btn-test :first-child {
+  max-width: 43rem;
+}
+
+main .btn-test :last-child {
+  max-width: 82rem;
+}
