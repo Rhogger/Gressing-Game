@@ -12,63 +12,121 @@ font-family: 'Montserrat', sans-serif; */
 }
 
 body {
-  background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+  background: linear-gradient(287.56deg, hsl(199, 88%, 87%) 0%, hsl(217, 96%, 81%) 100%);
 
   font-family: 'DM Sans', sans-serif;
 
   height: 100vh;
 
   display: grid;
-  align-items: center;
+  place-items: center;
 }
 
 main {
   background-color: #FFF;
 
-  margin: 0 auto;
   border-radius: 6px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
+  width: 100%;
   max-width: 428rem;
 }
 
-.result {
-  display: none;
-}
-
-main .text-test {
-  margin: 48rem;
+.text-test {
+  margin: 48rem 0;
 
   display: flex;
   flex-direction: column;
   gap: 16rem;
 }
 
-main .text-test h1 {
+.text-test h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: semibold;
   font-size: 24rem;
+  line-height: 29px;
+  color: hsl(238, 27%, 28%);
 }
 
-main .text-test p {
+.text-test p {
   font-family: 'DM Sans', sans-serif;
   font-size: 16rem;
+  line-height: 150%;
+  color: hsla(238, 27%, 28%, 0.8);
+  text-align: center;
 }
 
 main .btn-test {
+  background-color: #DCE2E9;
+
   margin-bottom: 64rem;
+  border-radius: 4px 0 0 4px;
 
   max-width: 125rem;
 }
 
 main .btn-test :first-child {
+  background-color: #DCE2E9;
+
+  color: #34355B;
+
+  padding: 16rem;
+  border: none;
+  border-radius: 4px 0 0 4px;
   max-width: 43rem;
 }
 
+input:focus {
+  outline: #FFF;
+}
+
+main .btn-test :first-child::-webkit-outer-spin-button,
+main .btn-test :first-child::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 main .btn-test :last-child {
+  background-color: #7879F1;
+  color: #FFF;
+
+  padding: 16rem;
+  border: none;
+  border-radius: 0 4px 4px 0;
   max-width: 82rem;
+}
+
+main .text-result h2 {
+  font-family: 'DM Sans';
+  font-size: 24rem;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+  color: #34355B;
+
+  margin: 48rem 64rem 33rem;
+}
+
+main .btn-result {
+  background-color: #7879F1;
+  color: #FFF;
+
+  padding: 16rem;
+  margin-bottom: 64rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.test,
+.test *,
+.text-test {
+  /* display: none; */
+}
+
+.result,
+.result * {
+  display: none;
 }
