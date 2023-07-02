@@ -18,26 +18,33 @@
 
 <body>
   <main>
-    <div class="text-test test">
-      <h1>Jogo da Adivinhação</h1>
+    <div class="test-page">
+      <div class="text-test test">
+        <h1>Jogo da Adivinhação</h1>
 
-      <p>Adivinhe o número entre 0 e 10</p>
+        <p>Adivinhe o número entre 0 e 10</p>
+      </div>
+
+      <div class="btn-test test">
+        <form>
+          <input type="number" placeholder="6" id="input-number" min="0" max="10">
+
+          <input type="submit" value="Tentar" onclick="handleClick()">
+        </form>
+      </div>
     </div>
 
-    <div class="text-result result">
-      <h2>Acertou em <span>x</span> tentativas!</h2>
+    <div class="result-page hide">
+      <div class="text-result result ">
+        <h2>Acertou em <span id="attempts"></span> tentativas!</h2>
+      </div>
+
+      <button class="btn-result result" onclick="playAgain()">
+        <p>Jogar novamente</p>
+      </button>
     </div>
-
-    <div class="btn-test test">
-      <input type="number">
-
-      <input type="submit" value="Tentar">
-    </div>
-
-    <button class="btn-result result">
-      <p>Jogar novamente</p>
-    </button>
   </main>
+  <script src="script.js"></script>
 </body>
 
 </html>
