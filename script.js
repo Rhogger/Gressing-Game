@@ -1,3 +1,5 @@
+const inputNumber = document.querySelector('#input-number')
+
 const randomNumber = Math.floor(Math.random() * 11)
 let attempts = 0
 
@@ -7,12 +9,18 @@ btnTry.addEventListener('click', handleClick)
 const btnPlayAgain = document.querySelector('.btn-result')
 btnPlayAgain.addEventListener('click', playAgain)
 
+document.addEventListener('keydown', function (e) {
+  if (e.key == 'Enter' && document.querySelector('.test-page').classList.contains('hide')) {
+    console.log('Deu certo');
+    inputNumber.value = null
+    playAgain()
+  }
+})
+
 function handleClick() {
   event.preventDefault()
 
   attempts++
-
-  const inputNumber = document.querySelector('#input-number')
 
   if (Number(inputNumber.value) == randomNumber) {
     document.querySelector('#attempts').innerHTML = attempts
