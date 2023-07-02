@@ -1,6 +1,12 @@
 const randomNumber = Math.floor(Math.random() * 11)
 let attempts = 0
 
+const btnTry = document.querySelector('#btn-try')
+btnTry.addEventListener('click', handleClick)
+
+const btnPlayAgain = document.querySelector('.btn-result')
+btnPlayAgain.addEventListener('click', playAgain)
+
 function handleClick() {
   event.preventDefault()
 
@@ -22,6 +28,6 @@ function playAgain() {
 }
 
 function togglePage() {
-  document.querySelector('.test-page').classList.add('hide')
-  document.querySelector('.result-page').classList.remove('hide')
+  document.querySelector('.test-page').classList.toggle('hide')
+  document.querySelector('.result-page').classList.toggle('hide')
 }
